@@ -43,20 +43,20 @@ public class Main {
             }
             if (userChoice.equalsIgnoreCase("V")) {
                 Print(list);
-                saved = true;
             }
             if (userChoice.equalsIgnoreCase("Q")) {
                 quit = Quit(scan);
             }
             if (userChoice.equalsIgnoreCase("O")) {
-                if (saved = false) {
-                    boolean temp = InputHelper.getYNConfirm("Save current list?", scan);
-                    if (temp = true) {
-                        saved = Save(list,scan);
+                if (saved == false) {
+                    boolean temp = InputHelper.getYNConfirm("Save current list? [Y/N]", scan);
+                    if (temp == true) {
+                        saved = Save(list, scan);
                     }
                 }
+                list.clear();
                 IOHelper.openFile(list);
-            }
+                }
             if (userChoice.equalsIgnoreCase("S")) {
                 saved = Save(list, scan);
             }
@@ -74,7 +74,6 @@ public class Main {
         String item = InputHelper.getNonZeroLenString("Input the item you would like to add to the list.", scan);
         list.add(item);
     }
-
 
     public static void Delete(Scanner scan, ArrayList list) {
         int index = InputHelper.getRangedInt(scan, "Input the index of the item you would like to remove in the list.", 0, list.size()-1);
