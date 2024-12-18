@@ -23,8 +23,8 @@ public class Main {
             System.out.println("Options: \n" +
                     "A – Add an item to the list \n" +
                     "D – Delete an item from the list \n" +
-                    "V - View the program\n" +
-                    "Q – Quit the program\n" +
+                    "V - View the list\n" +
+                    "Q – Quit this program\n" +
                     "O – Open a list file from PC \n" +
                     "S – Save the current list file to PC \n" +
                     "C – Clears all the elements from the current list \n");
